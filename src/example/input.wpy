@@ -253,14 +253,21 @@
                 this.checkboxItems = checkboxItems;
             },
             bindDateChange (e) {
-                this.data = e.detail.value;
+                this.date = e.detail.value;
+                console.log('picker Date 发生选择改变，携带值为', e.detail.value);
+                this.setData({
+                    date: e.detail.value
+                    });
             },
             bindTimeChange (e) {
                 this.time = e.detail.value;
+                console.log('picker Time 发生选择改变，携带值为', e.detail.value);
+                    this.setData({
+                     time: e.detail.value
+                });
             },
             bindCountryCodeChange (e) {
                 console.log('picker country code 发生选择改变，携带值为', e.detail.value);
-
                 this.countryCodeIndex = e.detail.value;
             },
             bindAccountChange (e) {
@@ -269,6 +276,7 @@
             },
             bindCountryChange (e) {
                 this.countryIndex = e.detail.value;
+                this.setData({index: e.detail.value });
             },
             bindAgreeChange (e) {
                 this.isAgree = !!e.detail.value.length;
