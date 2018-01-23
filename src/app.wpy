@@ -74,7 +74,9 @@ export default class extends wepy.app {
             'example/navbar',
             'example/tabbar',
 
-            'example/searchbar'
+            'example/searchbar',
+
+            'example/testUI'
         ],
         'window': {
             'navigationBarTextStyle': 'black',
